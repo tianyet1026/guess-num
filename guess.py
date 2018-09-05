@@ -1,14 +1,16 @@
 import random
 r = random.randint(1,100)
-
+i=0
 while True:
 	ans = input('請輸入您猜測的數字?(1~100整數)')
 	ans = int(ans)
+	i+=1 #i=i+1功能相同的速寫法
 	if ans == r:
 		print('您猜對了，恭禧!')
+		print('已經猜了', i, '次')
 		break
-	else:
-		if ans > r:
-			print('您猜的數字比答案大!再猜一次!')
-		elif ans < r:
-			print('您猜的數字比答案小!再猜一次!')
+	elif ans > r:
+		print('您猜的數字比答案大!')
+	elif ans < r:
+		print('您猜的數字比答案小!')
+	print('已經猜了', i, '次')
